@@ -41,6 +41,6 @@ if st.button("Predict"):
     prediction_proba = model.predict_proba(input_scaled)[0][1]
 
     if prediction_proba > 0.5:
-        st.error(f"High chance of churn ({prediction_proba*100:.1f})")
+        st.error(f"High chance of churn ({prediction_proba*100:.1f}%)")
     else:
-        st.success(f"Low chance of churn ({prediction_proba*100:.1f})")
+        st.success(f"Low chance of churn ({prediction_proba*100:.1f}%)")
